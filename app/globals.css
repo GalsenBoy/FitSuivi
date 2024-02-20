@@ -71,6 +71,7 @@
   --background-one: #061121;
   --background-two: #010118;
   --title: #224b4e;
+  --icone-color: #0577DA;
   --text-color: rgb(228, 228, 228);
 }
 
@@ -82,4 +83,5 @@
 
 body {
   color: var(--text-color);
+  background-color: var(--background-two);
 }

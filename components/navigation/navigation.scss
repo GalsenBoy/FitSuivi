@@ -4,10 +4,20 @@ nav {
     position: fixed;
     width: 350px;
     height: 100vh;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 0 50px 50px 0;
     background: var(--background-one);
-    @include flexColumn();
-    @include alignCenter();
-    @include justifyBetween()
+    @include justifyBetween();
+
+    span {
+        color: var(--icone-color);
+    }
 }
+
+nav,
+div {
+    @include flexColumn()
+}
+
+// .icone-color {
+
+// }
