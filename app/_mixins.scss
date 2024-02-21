@@ -10,8 +10,18 @@
     align-items: center
 }
 
+@mixin flexAlignCenter {
+    @include flex();
+    @include alignCenter();
+}
+
 @mixin justifyBetween {
     justify-content: space-between
+}
+
+@mixin flexJustifyBetween {
+    @include flex();
+    @include justifyBetween()
 }
 
 @mixin flexJustifyCenter {
