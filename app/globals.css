@@ -84,4 +84,5 @@
 body {
   color: var(--text-color);
   background-color: var(--background-two);
+  font-family: "Noyh Geometric", Arial, Helvetica, sans-serif;
 }
