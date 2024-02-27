@@ -2,7 +2,6 @@
 
 .top-bar {
     @include flexJustifyBetween();
-    // height: 65px;
     padding: 1.5em;
 
     #top-bar-title,

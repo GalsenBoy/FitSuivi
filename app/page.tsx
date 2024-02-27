@@ -1,24 +1,19 @@
 "use client";
-import DoughnutChart from "@/components/Doughnut/DoughnutChart";
+import ExerciceChart from "@/components/card/exercise-chart/ExerciceChart";
+import SleepChart from "@/components/card/sleep-chart/SleepChart";
+import StepsChart from "@/components/card/steps-chart/StepsChart";
+import WaterChart from "@/components/card/water-chart/WaterChart";
+import Result from "@/components/result/Result";
 export default function Home() {
-  const progressData = 65;
-  const goal = 100;
   return (
     <div style={{ gridColumn: "2/-2", padding: "1em" }}>
-      <div id="chart-card">
-        <DoughnutChart data={progressData} goal={goal} />
-        <div className="uppercase text-left mt-2 text-sm [&>*]:py-1 [&>p>*]:text-blue-400">
-          <p>
-            Distance : <span>5.7 km</span>
-          </p>
-          <p>
-            Colorie brulée : <span>100 kcal</span>
-          </p>
-          <p>
-            Votre objectifs : <span>11 km</span>
-          </p>
-        </div>
+      <div className="grid grid-cols-4 gap-2 grid-flow-col	">
+        <StepsChart />
+        <ExerciceChart />
+        <SleepChart />
+        <WaterChart />
       </div>
+      <Result />
     </div>
   );
 }

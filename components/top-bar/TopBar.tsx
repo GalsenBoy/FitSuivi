@@ -6,7 +6,7 @@ import { FaMoon } from "react-icons/fa";
 
 export default function TopBar() {
   return (
-    <nav className="top-bar">
+    <header className="top-bar">
       <div id="top-bar-title">
         <h1 className="text-2xl">STATISTIQUES</h1>
         <input type="date" />
@@ -31,6 +31,6 @@ export default function TopBar() {
           quality={100}
         />
       </div>
-    </nav>
+    </header>
   );
 }
