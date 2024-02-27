@@ -73,6 +73,7 @@
   --title: #224b4e;
   --icone-color: #0577DA;
   --text-color: rgb(228, 228, 228);
+  --secondary-text-color: #059BFF
 }
 
 @layer base {
@@ -80,6 +81,20 @@
     @apply border-border;
   }
 }
+
+#chart-card {
+  background-color: var(--background-one);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
 
 body {
   color: var(--text-color);
