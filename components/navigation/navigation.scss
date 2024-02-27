@@ -1,33 +1,30 @@
 @import "@/app/mixins";
 
 #navigation {
-    // position: fixed;
-    // left: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 350px;
-    height: 100vh;
-    // height: 100vh;
     border-radius: 0 50px 50px 0;
     background: var(--background-one);
     @include justifyBetween();
     font-size: 1.2em;
-    // grid-row: 2;
-
+    overflow-y: hidden;
 
     a,
     .isActive {
         @include flexAlignCenter();
         padding: .6em 0;
         gap: 1em;
-        // border-radius: 50px 0 0 50px;
-        // background-color: var(--background-two);
         position: relative;
-        // margin-top: 2em;
 
     }
 
     .isActive {
         border-radius: 50px 0 0 50px;
         background-color: var(--background-two);
+        // transition: .3s;
 
         &::before,
         &::after {
@@ -36,19 +33,18 @@
             width: 20px;
             height: 20px;
             background: transparent;
+            right: 0;
 
         }
 
         &::before {
             top: -20px;
-            right: 0;
             border-bottom-right-radius: 25px;
             box-shadow: 5px 5px 0 5px var(--background-two);
         }
 
         &::after {
             bottom: -20px;
-            right: 0;
             border-top-right-radius: 25px;
             box-shadow: 5px -5px 0 5px var(--background-two);
         }

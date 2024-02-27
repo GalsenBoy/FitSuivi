@@ -1,0 +1,36 @@
+@import "@/app/mixins";
+
+#result {
+    background-color: var(--background-one);
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1em;
+
+    h1,
+    p {
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p,
+    span {
+        font-size: 1.1em;
+    }
+
+    .result-content,
+    .result-value {
+        @include flexAlignCenter();
+    }
+
+    .result-content {
+        gap: 1em;
+    }
+
+    .result-value {
+        gap: .5em;
+    }
+}
