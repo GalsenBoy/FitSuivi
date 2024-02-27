@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/top-bar/TopBar";
+import Navigation from "@/components/navigation/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={inter.className}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "350px 1fr",
+            gridTemplateRows: "65px 1fr",
+            height: "100vh",
+            gap: "1em",
+          }}
+        >
+          <Navigation />
+          <TopBar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
