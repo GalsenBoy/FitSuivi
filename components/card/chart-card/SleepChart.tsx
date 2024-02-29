@@ -1,5 +1,5 @@
 import DoughnutChart from "@/components/doughnut/DoughnutChart";
-import ChartCard from "../chart-card/ChartCard";
+import ChartCard from "./ChartCard";
 
 export default function SleepChart() {
   return (

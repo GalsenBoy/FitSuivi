@@ -38,3 +38,17 @@
     @include flex();
     flex-direction: column;
 }
+
+@mixin imageCard {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+@mixin cardStyle {
+    max-width: 250px;
+    margin-top: 4em;
+    background-color: var(--background-one);
+    border-radius: 1rem;
+}
