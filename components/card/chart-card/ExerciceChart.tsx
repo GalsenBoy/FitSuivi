@@ -1,14 +1,12 @@
 import DoughnutChart from "@/components/doughnut/DoughnutChart";
-import ChartCard from "../chart-card/ChartCard";
+import ChartCard from "./ChartCard";
 
-export default function StepsChart() {
-  const progressData = 65;
-  const goal = 100;
+export default function ExerciceChart() {
   return (
     <div id="chart-card">
-      <DoughnutChart data={progressData} goal={goal} />
+      <DoughnutChart data={65} goal={100} />
       <ChartCard
-        data_one="Distance"
+        data_one="Temps d'activité"
         data_two="Calories brulées"
         data_three="votre objectif"
       />

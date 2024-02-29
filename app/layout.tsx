@@ -30,7 +30,7 @@ export default function RootLayout({
         >
           <Navigation />
           <TopBar />
-          {children}
+          <div style={{ gridColumn: "2/-2", padding: "1em" }}> {children}</div>
         </div>
       </body>
     </html>
