@@ -16,11 +16,6 @@ export default function Navigation() {
       path: "/",
     },
     {
-      label: "Objectif",
-      icon: <TbTargetArrow />,
-      path: "/objectif",
-    },
-    {
       label: "Regime",
       icon: <GiFruitBowl />,
       path: "/regime",
@@ -29,6 +24,11 @@ export default function Navigation() {
       label: "Bien être",
       icon: <FaHeartPulse />,
       path: "/bien-etre",
+    },
+    {
+      label: "Objectif",
+      icon: <TbTargetArrow />,
+      path: "/objectif",
     },
   ];
   const navLogins = [
