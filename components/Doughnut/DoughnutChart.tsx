@@ -16,7 +16,7 @@ const DoughnutChart = ({ data, goal }: DoughnutChartProps) => {
     datasets: [
       {
         data: [data, remaining > 0 ? remaining : 0],
-        backgroundColor: ["#36A2EB", "#d3d3d3"],
+        backgroundColor: ["#246EB9", "#d3d3d3"],
         borderWidth: 0,
         weight: 50,
       },

@@ -7,6 +7,10 @@
     border-radius: 1rem;
     padding: 1em;
 
+    .icon-result {
+        color: var(--icone-color);
+    }
+
     h1,
     p {
         text-transform: uppercase;

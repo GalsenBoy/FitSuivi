@@ -4,6 +4,12 @@
     @include flexJustifyBetween();
     padding: 1.5em;
 
+    input {
+        background-color: var(--background-one);
+        padding: .4em;
+        border-radius: .5em;
+    }
+
     #top-bar-title,
     #top-bar-info {
         @include flexAlignCenter();

@@ -41,7 +41,7 @@ export default function Regime() {
   ];
   return (
     <section>
-      <h1>Conseil de bien-être</h1>
+      <h1 className="text-center text-3xl">Conseil de bien-être</h1>
       <div id="bien-etre-content" className="grid grid-cols-4">
         {regimes.map((regime, index) => (
           <div key={index} id="bien-etre">
