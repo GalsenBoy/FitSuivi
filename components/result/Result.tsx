@@ -6,11 +6,11 @@ export default function Result() {
   const results = [
     {
       value: "156 Kcal",
-      icon: <FaFireAlt className="text-3xl text-blue-400" />,
+      icon: <FaFireAlt className="text-3xl icon-result" />,
     },
     {
       value: "79",
-      icon: <FaHeartbeat className="text-3xl text-blue-400" />,
+      icon: <FaHeartbeat className="text-3xl icon-result" />,
     },
   ];
   return (
