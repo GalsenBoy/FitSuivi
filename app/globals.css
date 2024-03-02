@@ -100,19 +100,18 @@ body {
   color: var(--text-color);
   background-color: var(--background-two);
   font-family: "Noyh Geometric", Arial, Helvetica, sans-serif;
+}
 
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
+body::-webkit-scrollbar {
+  width: 10px;
+}
 
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--icone-color);
-    border-radius: 20px;
-    border: 2px solid var(--background-one);
+body::-webkit-scrollbar-track {
+  background: var(--background-one);
+}
 
-    &::-webkit-scrollbar-track {
-      background-color: var(--background-one);
-    }
-
-  }
+body::-webkit-scrollbar-thumb {
+  background-color: var(--icone-color);
+  border-radius: 20px;
+  border: 2px solid var(--background-one);
 }
