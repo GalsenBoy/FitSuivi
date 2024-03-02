@@ -1,0 +1,38 @@
+@import "@/app/mixins";
+
+#long-term-result {
+
+    #long-term-card {
+        @include resultCard();
+        max-width: 350px;
+
+        .icon-result {
+            color: var(--icone-color);
+        }
+
+        h1,
+        p {
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        p,
+        span {
+            font-size: small;
+        }
+
+        p {
+            @include flexAlignCenter();
+            gap: 1em;
+            padding: .7em 0;
+
+            span {
+                font-size: 1.8em;
+                color: var(--icone-color);
+            }
+        }
+    }
+}

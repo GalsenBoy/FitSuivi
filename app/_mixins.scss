@@ -52,3 +52,11 @@
     background-color: var(--background-one);
     border-radius: 1rem;
 }
+
+@mixin resultCard {
+    margin: 3em auto 3em auto;
+    background-color: var(--background-one);
+    border-radius: 1rem;
+    padding: 1em;
+    max-width: 550px;
+}
