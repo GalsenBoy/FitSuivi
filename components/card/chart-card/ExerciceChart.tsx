@@ -1,4 +1,4 @@
-import DoughnutChart from "@/components/doughnut/DoughnutChart";
+import DoughnutChart from "../../doughnut/DoughnutChart";
 import ChartCard from "./ChartCard";
 
 export default function ExerciceChart() {
