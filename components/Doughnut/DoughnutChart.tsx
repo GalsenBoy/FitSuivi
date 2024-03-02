@@ -9,7 +9,7 @@ interface DoughnutChartProps {
 
 ChartJS.register(ArcElement);
 
-const DoughnutChart = ({ data, goal }: DoughnutChartProps) => {
+export default function DoughnutChart({ data, goal }: DoughnutChartProps) {
   const remaining = goal - data;
   const chartData = {
     labels: ["Progression", "Reste à faire"],
@@ -35,6 +35,4 @@ const DoughnutChart = ({ data, goal }: DoughnutChartProps) => {
       <Doughnut className="" data={chartData} options={options} />
     </div>
   );
-};
-
-export default DoughnutChart;
+}
