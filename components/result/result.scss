@@ -1,11 +1,9 @@
 @import "@/app/mixins";
 
 #result {
-    background-color: var(--background-one);
+    @include resultCard();
     max-width: 550px;
-    margin: 3em auto 0 auto;
-    border-radius: 1rem;
-    padding: 1em;
+    margin-top: 6em;
 
     .icon-result {
         color: var(--icone-color);
@@ -17,7 +15,8 @@
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 1.7em;
+        margin-bottom: 1em;
     }
 
     p,
@@ -25,9 +24,9 @@
         font-size: 1.1em;
     }
 
-    .result-content {
-        @include flexAlignCenter();
-        gap: 1em;
-        padding: 1.5em;
-    }
+    // .result-content {
+    //     @include flexAlignCenter();
+    //     gap: 1em;
+    //     padding: 1.5em;
+    // }
 }
