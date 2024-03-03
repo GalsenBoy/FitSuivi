@@ -1,0 +1,16 @@
+.dialog-btn {
+    background: var(--icone-color);
+
+    &:hover {
+        background: var(--text-color);
+        color: var(--icone-color);
+    }
+}
+
+#chart-dialog {
+    background: var(--background-one);
+}
+
+#name {
+    color: var(--background-one);
+}
