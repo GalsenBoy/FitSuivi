@@ -1,4 +1,4 @@
-import DoughnutChart from "@/components/doughnut/DoughnutChart";
+import DoughnutChart from "@/components/Doughnut/DoughnutChart";
 import ChartCard from "./ChartCard";
 
 export default function WaterChart() {
