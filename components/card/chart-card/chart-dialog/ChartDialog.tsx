@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -18,6 +17,8 @@ type ChartDialogProps = {
   label: string;
   btnContent: string;
   placeholder?: string;
+  onChange: (value: string) => void;
+  onSave: () => void;
 };
 
 export function ChartDialog({
@@ -25,21 +26,28 @@ export function ChartDialog({
   label,
   btnContent,
   placeholder,
+  onChange,
+  onSave,
 }: ChartDialogProps) {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  };
+
+  const handleSaveDialog = () => {
+    onSave();
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="dialog-btn">{btnContent}</Button>
+        <Button className="dialog-btn">Ajout {btnContent}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]" id="chart-dialog">
         <DialogHeader>
           <DialogTitle>{dialogTitle}</DialogTitle>
-          {/* <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription> */}
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+          <form className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               {label}
             </Label>
@@ -48,11 +56,16 @@ export function ChartDialog({
               type="text"
               placeholder={placeholder}
               className="col-span-3"
+              onChange={handleInputChange}
             />
-          </div>
+          </form>
         </div>
         <DialogFooter>
-          <Button className="dialog-btn" type="submit">
+          <Button
+            onClick={handleSaveDialog}
+            className="dialog-btn"
+            type="submit"
+          >
             Enregistrer
           </Button>
         </DialogFooter>
