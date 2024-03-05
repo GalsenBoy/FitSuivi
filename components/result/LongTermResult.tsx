@@ -33,7 +33,7 @@ export default function LongTermResult() {
             <span>
               <FaFireAlt />
             </span>
-            Nombres de calories brulées : 5000
+            Nombres de calories brulées : 5000KCAL
           </p>
         </div>
         <div id="long-term-card">
@@ -60,7 +60,7 @@ export default function LongTermResult() {
             <span>
               <FaFireAlt />
             </span>
-            Nombres de calories brulées : 5000
+            Nombres de calories brulées : 5000KCAL
           </p>
         </div>
         <div id="long-term-card">
@@ -87,7 +87,7 @@ export default function LongTermResult() {
             <span>
               <FaFireAlt />
             </span>
-            Nombres de calories brulées : 5000
+            Nombres de calories brulées : 5000 KCAL
           </p>
         </div>
       </div>

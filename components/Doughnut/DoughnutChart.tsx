@@ -31,7 +31,7 @@ export default function DoughnutChart({ data, goal }: DoughnutChartProps) {
   };
 
   return (
-    <div style={{ width: 100, height: 100 }}>
+    <div style={{ width: 100, height: 100, marginBottom: "1em" }}>
       <Doughnut className="" data={chartData} options={options} />
     </div>
   );

@@ -15,7 +15,7 @@ export default function ChartCard({
   value_three,
 }: ChartCardProps) {
   return (
-    <div className="uppercase text-left mt-2 text-sm [&>*]:py-1 [&>p>*]:text-blue-400">
+    <div className="uppercase text-left my-4 text-sm [&>*]:py-1 [&>p>*]:text-blue-400">
       <p>
         {data_one} : <span>{value_one}</span>
       </p>

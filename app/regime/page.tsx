@@ -6,15 +6,15 @@ export default function Regime() {
   const regimes = [
     {
       title: "Perdre du poids",
-      image: "/healthy.jpg",
+      image: "/healthy.webp",
     },
     {
       title: "Garder la forme",
-      image: "/healthy.jpg",
+      image: "/forme.webp",
     },
     {
       title: "Prendre du poids",
-      image: "/weight.jpg",
+      image: "/weight.webp",
     },
   ];
   return (

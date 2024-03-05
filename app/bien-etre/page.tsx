@@ -4,39 +4,39 @@ export default function Regime() {
   const regimes = [
     {
       title: "Surveiller son alimentation",
-      image: "/healthy.jpg",
+      image: "/healthy.webp",
     },
     {
       title: "Pratiquer une activité physique régulière",
-      image: "/healthy.jpg",
+      image: "/activite.webp",
     },
     {
       title: "Boire de l'eau régulièrement",
-      image: "/weight.jpg",
+      image: "/eau.webp",
     },
     {
       title: "Mieux dormir",
-      image: "/weight.jpg",
+      image: "/dormir.webp",
     },
     {
       title: "Prendre du temps de se détendre",
-      image: "/weight.jpg",
+      image: "/detendre.webp",
     },
     {
       title: "Avoir une attitude positive",
-      image: "/weight.jpg",
+      image: "/positif.webp",
     },
     {
       title: "Eviter le tabac et l'alcool",
-      image: "/weight.jpg",
+      image: "/tabac.webp",
     },
     {
       title: "Limiter le temps d'écran",
-      image: "/weight.jpg",
+      image: "/temps.webp",
     },
     {
       title: "Prendre soin de sa santé mentale",
-      image: "/weight.jpg",
+      image: "/sante.webp",
     },
   ];
   return (
@@ -45,13 +45,15 @@ export default function Regime() {
       <div id="bien-etre-content" className="grid grid-cols-4">
         {regimes.map((regime, index) => (
           <div key={index} id="bien-etre">
-            <Image
-              className=""
-              src={regime.image}
-              alt={regime.title}
-              width={200}
-              height={200}
-            />
+            <div>
+              <Image
+                className=""
+                src={regime.image}
+                alt={regime.title}
+                width={200}
+                height={200}
+              />
+            </div>
             <p>{regime.title}</p>
           </div>
         ))}

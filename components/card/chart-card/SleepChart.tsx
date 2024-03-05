@@ -6,7 +6,7 @@ import React from "react";
 export default function SleepChart() {
   const [progressData, setProgressData] = React.useState(0);
   const [inputValue, setInputValue] = React.useState(0);
-  const goal = 100;
+  const goal = 8;
 
   const handleSleepChange = (value: string) => {
     setInputValue(+value);
