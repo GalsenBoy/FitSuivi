@@ -18,7 +18,7 @@ type ChartDialogProps = {
   btnContent: string;
   placeholder?: string;
   onChange: (value: string) => void;
-  onSave: () => void;
+  onSave?: () => void;
 };
 
 export function ChartDialog({
@@ -34,7 +34,9 @@ export function ChartDialog({
   };
 
   const handleSaveDialog = () => {
-    onSave();
+    if (onSave) {
+      onSave();
+    }
   };
 
   return (
