@@ -1,27 +1,43 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "./objectif.scss";
-import { Button } from "@/components/ui/button";
 import PageCard from "@/components/page-card/PageCard";
+import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
+import { Label } from "@radix-ui/react-label";
+
 export default function Objectif() {
   const objectifs = [
     {
       title: "Objectif distance",
       image: "/healthy.webp",
+      placeholder: "Entrez la distance en km",
+      dialogTitle: "Mis à jour objectif distance",
     },
     {
       title: "Objectif exercice",
       image: "/activite.webp",
+      placeholder: "Entrez le temps d'exercice en minutes",
+      dialogTitle: "Mis à jour objectif exercice",
     },
     {
       title: "Objectif eau",
       image: "/eau.webp",
+      placeholder: "Entrez la quantité d'eau en ml",
+      dialogTitle: "Mis à jour objectif eau",
     },
     {
       title: "Objectif sommeil",
       image: "/dormir.webp",
+      placeholder: "Entrez le temps de sommeil en heures",
+      dialogTitle: "Mis à jour objectif sommeil",
     },
   ];
+
+  const handleInput = (value: string) => {
+    console.log(+value + " is updated");
+  };
+
   return (
     <section id="objectif" className=" ">
       <h1>
@@ -41,7 +57,13 @@ export default function Objectif() {
             alt={objectif.title}
             padding="p-4"
           >
-            <Button className="mt-6 uppercase">{objectif.title}</Button>
+            <ChartDialog
+              btnContent={objectif.title}
+              label={objectif.title}
+              placeholder={objectif.placeholder}
+              dialogTitle={objectif.dialogTitle}
+              onChange={handleInput}
+            />
           </PageCard>
         ))}
       </div>
