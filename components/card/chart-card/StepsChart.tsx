@@ -2,11 +2,13 @@ import DoughnutChart from "@/components/Doughnut/DoughnutChart";
 import ChartCard from "./ChartCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
 import React from "react";
+import { useObjectifStore } from "@/stores/objectif-store";
 
 export default function StepsChart() {
   const [progressData, setProgressData] = React.useState<number>(0);
   const [inputValue, setInputValue] = React.useState<number>(0);
-  const goal = 12;
+  const { distance } = useObjectifStore();
+  const goal = distance;
 
   const handleStepsChange = (value: string) => {
     setInputValue(+value);

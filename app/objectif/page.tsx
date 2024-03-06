@@ -4,9 +4,20 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import "./objectif.scss";
 import PageCard from "@/components/page-card/PageCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
-import { Label } from "@radix-ui/react-label";
+import React from "react";
+import { useObjectifStore } from "@/stores/objectif-store";
 
 export default function Objectif() {
+  const {
+    distance,
+    exercice,
+    water,
+    sleep,
+    setDistance,
+    setExercice,
+    setWater,
+    setSleep,
+  } = useObjectifStore();
   const objectifs = [
     {
       title: "Objectif distance",
@@ -34,10 +45,27 @@ export default function Objectif() {
     },
   ];
 
-  const handleInput = (value: string) => {
-    console.log(+value + " is updated");
+  const handleInput = (value: string, objectif: { dialogTitle: string }) => {
+    const valueNumber = parseInt(value);
+    if (valueNumber > 0) {
+      if (objectif.dialogTitle === "Mis à jour objectif distance") {
+        setDistance(valueNumber);
+        console.log("distance", valueNumber);
+      }
+      if (objectif.dialogTitle === "Mis à jour objectif exercice") {
+        setExercice(valueNumber);
+        console.log("exercice", valueNumber);
+      }
+      if (objectif.dialogTitle === "Mis à jour objectif eau") {
+        setWater(valueNumber);
+        console.log("eau", valueNumber);
+      }
+      if (objectif.dialogTitle === "Mis à jour objectif sommeil") {
+        setSleep(valueNumber);
+        console.log("sommeil", valueNumber);
+      }
+    }
   };
-
   return (
     <section id="objectif" className=" ">
       <h1>
@@ -62,7 +90,7 @@ export default function Objectif() {
               label={objectif.title}
               placeholder={objectif.placeholder}
               dialogTitle={objectif.dialogTitle}
-              onChange={handleInput}
+              onChange={(value) => handleInput(value, objectif)}
             />
           </PageCard>
         ))}
