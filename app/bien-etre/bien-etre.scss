@@ -1,18 +1,7 @@
 @import "../mixins";
 
-#bien-etre {
-    @include cardStyle();
-    @include flexColumn();
-    @include alignCenter();
-    padding: 1rem;
-
-    img {
-        @include imageCard();
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin-top: 1.7em;
-        text-align: center;
-    }
+p {
+    font-size: 1.2rem;
+    margin-top: 1.7em;
+    text-align: center;
 }

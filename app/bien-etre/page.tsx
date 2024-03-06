@@ -1,6 +1,6 @@
-import Image from "next/image";
 import "./bien-etre.scss";
-export default function Regime() {
+import PageCard from "@/components/page-card/PageCard";
+export default function BienEtre() {
   const regimes = [
     {
       title: "Surveiller son alimentation",
@@ -44,18 +44,14 @@ export default function Regime() {
       <h1 className="text-center text-3xl">Conseil de bien-être</h1>
       <div id="bien-etre-content" className="grid grid-cols-4">
         {regimes.map((regime, index) => (
-          <div key={index} id="bien-etre">
-            <div>
-              <Image
-                className=""
-                src={regime.image}
-                alt={regime.title}
-                width={200}
-                height={200}
-              />
-            </div>
+          <PageCard
+            key={index}
+            image={regime.image}
+            alt={regime.title}
+            padding="p-4"
+          >
             <p>{regime.title}</p>
-          </div>
+          </PageCard>
         ))}
       </div>
     </section>

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import "./regime.scss";
+import PageCard from "@/components/page-card/PageCard";
 
 export default function Regime() {
   const regimes = [
@@ -24,16 +23,14 @@ export default function Regime() {
       </h1>
       <div className=" grid grid-cols-3">
         {regimes.map((regime, index) => (
-          <div key={index} id="regime-card">
-            <Image
-              className=""
-              src={regime.image}
-              alt={regime.title}
-              width={200}
-              height={200}
-            />
-            <Button className="mt-6 uppercase">{regime.title}</Button>
-          </div>
+          <PageCard
+            key={index}
+            image={regime.image}
+            alt={regime.title}
+            padding="p-8"
+          >
+            <Button className="mt-6 uppercase">{regime.title}</Button>{" "}
+          </PageCard>
         ))}
       </div>
     </section>
