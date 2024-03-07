@@ -8,16 +8,7 @@ import React from "react";
 import { useObjectifStore } from "@/stores/objectif-store";
 
 export default function Objectif() {
-  const {
-    distance,
-    exercice,
-    water,
-    sleep,
-    setDistance,
-    setExercice,
-    setWater,
-    setSleep,
-  } = useObjectifStore();
+  const { setDistance, setExercice, setWater, setSleep } = useObjectifStore();
   const objectifs = [
     {
       title: "Objectif distance",
