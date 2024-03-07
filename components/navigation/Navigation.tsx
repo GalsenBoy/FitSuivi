@@ -26,9 +26,9 @@ export default function Navigation() {
       path: "/bien-etre",
     },
     {
-      label: "Objectif",
+      label: "Objectifs",
       icon: <TbTargetArrow />,
-      path: "/objectif",
+      path: "/objectifs",
     },
   ];
   const navLogins = [
