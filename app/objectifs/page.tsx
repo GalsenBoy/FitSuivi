@@ -35,6 +35,8 @@ export default function Objectif() {
       dialogTitle: "Mis à jour objectif sommeil",
     },
   ];
+  const poids = 88;
+  const poidsObjectif = 75;
 
   const handleInput = (value: string, objectif: { dialogTitle: string }) => {
     const valueNumber = parseInt(value);
@@ -88,12 +90,18 @@ export default function Objectif() {
       </div>
       <div className="grid grid-cols-3 items-center mt-7">
         <div>
-          <h2>88 KG</h2>
+          <h2
+            className={
+              poids > poidsObjectif ? "text-red-500" : "text-green-500"
+            }
+          >
+            {poids} KG
+          </h2>
           <p>Votre poids actuels</p>
         </div>
         <FaArrowRightLong id="fa-arrow" />
         <div>
-          <h2>75 KG</h2>
+          <h2>{poidsObjectif} KG</h2>
           <p>Poids à atteindre</p>
         </div>
       </div>

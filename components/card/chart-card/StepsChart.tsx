@@ -3,24 +3,27 @@ import ChartCard from "./ChartCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
 import React from "react";
 import { useObjectifStore } from "@/stores/objectif-store";
+import { Toaster, toast } from "sonner";
 
 export default function StepsChart() {
   const [progressData, setProgressData] = React.useState<number>(0);
   const [inputValue, setInputValue] = React.useState<number>(0);
   const { distance } = useObjectifStore();
-  const goal = distance;
+  const goal = distance + 10;
 
   const handleStepsChange = (value: string) => {
     setInputValue(+value);
   };
   const handleSave = () => {
     if (inputValue > 0 && typeof inputValue === "number") {
-      setProgressData(progressData + inputValue);
+      setProgressData((prevProgressData) => prevProgressData + inputValue);
+      toast.success("Votre distance parcourue à bien été mis à jour");
     }
   };
 
   return (
     <div id="chart-card">
+      <Toaster richColors />
       <DoughnutChart data={progressData} goal={goal} />
       <ChartCard
         value_one={progressData + " km"}
