@@ -13,7 +13,8 @@
     overflow-y: hidden;
 
     a,
-    .isActive {
+    .isActive,
+    .btn-cl {
         @include flexAlignCenter();
         padding: .6em 0;
         gap: 1em;

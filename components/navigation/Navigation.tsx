@@ -1,48 +1,41 @@
 "use client";
 import "./navigation.scss";
-import { TbTargetArrow } from "react-icons/tb";
-import { IoMdSettings } from "react-icons/io";
-import { FaChartLine, FaHeartPulse } from "react-icons/fa6";
-import { GiFruitBowl } from "react-icons/gi";
-import { SlLogin } from "react-icons/sl";
 import { usePathname } from "next/navigation";
+import {
+  BarChart4,
+  Goal,
+  HeartPulse,
+  LogIn,
+  Salad,
+  Settings,
+} from "lucide-react";
+import { AuthDialog } from "../auth-components/AuthDialog";
 
 export default function Navigation() {
   const pathname = usePathname();
   const navigations = [
     {
       label: "Statistiques",
-      icon: <FaChartLine />,
+      icon: <BarChart4 />,
       path: "/",
     },
     {
       label: "Regime",
-      icon: <GiFruitBowl />,
+      icon: <Salad />,
       path: "/regime",
     },
     {
       label: "Bien être",
-      icon: <FaHeartPulse />,
+      icon: <HeartPulse />,
       path: "/bien-etre",
     },
     {
       label: "Objectifs",
-      icon: <TbTargetArrow />,
+      icon: <Goal />,
       path: "/objectifs",
     },
   ];
-  const navLogins = [
-    {
-      label: "Paramètres",
-      icon: <IoMdSettings />,
-      path: "/parametres",
-    },
-    {
-      label: "Se connecter",
-      icon: <SlLogin />,
-      path: "/connexion",
-    },
-  ];
+
   return (
     <aside style={{ gridRow: "1/2" }}>
       <nav id="navigation">
@@ -60,16 +53,21 @@ export default function Navigation() {
           ))}
         </div>
         <div id="nav-login" className="pb-4">
-          {navLogins.map((nav, index) => (
-            <a
-              href={nav.path}
-              key={index}
-              className={pathname == nav.path ? "isActive" : ""}
-            >
-              <span>{nav.icon}</span>
-              {nav.label}
-            </a>
-          ))}
+          <a
+            href="/parametres"
+            className={pathname == "/parametres" ? "isActive" : ""}
+          >
+            <span>
+              <Settings />
+            </span>
+            Parametres
+          </a>
+          <div className="btn-cl">
+            <span>
+              <LogIn />
+            </span>{" "}
+            <AuthDialog />
+          </div>
         </div>
       </nav>
     </aside>

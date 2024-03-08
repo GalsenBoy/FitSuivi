@@ -1,9 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./long-term-result.scss";
-import { FaRunning } from "react-icons/fa";
-import { GiNightSleep } from "react-icons/gi";
-import { IoIosWater } from "react-icons/io";
-import { FaFireAlt } from "react-icons/fa";
+// import { FootPrints } from "react-icons/fa";
+import { Bed, Flame, Footprints, GlassWaterIcon } from "lucide-react";
 
 export default function LongTermResult() {
   return (
@@ -13,25 +11,25 @@ export default function LongTermResult() {
           <h2 className="mb-3">Résultats de la semaine dernière</h2>
           <p>
             <span>
-              <FaRunning />
+              <Footprints />
             </span>
             Distances parcourues : 17km
           </p>
           <p>
             <span>
-              <GiNightSleep />
+              <Bed />
             </span>
             Temps de sommeils : 56h
           </p>
           <p>
             <span>
-              <IoIosWater />
+              <GlassWaterIcon />
             </span>
             Consommations d'eau : 10L
           </p>
           <p>
             <span>
-              <FaFireAlt />
+              <Flame />
             </span>
             Nombres de calories brulées : 5000KCAL
           </p>
@@ -40,25 +38,25 @@ export default function LongTermResult() {
           <h2 className="mb-3">Votre résultats mensuel</h2>
           <p>
             <span>
-              <FaRunning />
+              <Footprints />
             </span>
             Distances parcourues : 17km
           </p>
           <p>
             <span>
-              <GiNightSleep />
+              <Bed />
             </span>
             Temps de sommeils : 56h
           </p>
           <p>
             <span>
-              <IoIosWater />
+              <GlassWaterIcon />
             </span>
             Consommations d'eau : 10L
           </p>
           <p>
             <span>
-              <FaFireAlt />
+              <Flame />
             </span>
             Nombres de calories brulées : 5000KCAL
           </p>
@@ -67,25 +65,25 @@ export default function LongTermResult() {
           <h2 className="mb-3">Votre résultats annuel</h2>
           <p>
             <span>
-              <FaRunning />
+              <Footprints />
             </span>
             Distances parcourues : 17km
           </p>
           <p>
             <span>
-              <GiNightSleep />
+              <Bed />
             </span>
             Temps de sommeils : 56h
           </p>
           <p>
             <span>
-              <IoIosWater />
+              <GlassWaterIcon />
             </span>
             Consommations d'eau : 10L
           </p>
           <p>
             <span>
-              <FaFireAlt />
+              <Flame />
             </span>
             Nombres de calories brulées : 5000 KCAL
           </p>

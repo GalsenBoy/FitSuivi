@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import { FaArrowRightLong } from "react-icons/fa6";
 import "./objectif.scss";
 import PageCard from "@/components/page-card/PageCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
 import React from "react";
 import { useObjectifStore } from "@/stores/objectif-store";
+import { MoveRight } from "lucide-react";
 
 export default function Objectif() {
   const { setDistance, setExercice, setWater, setSleep } = useObjectifStore();
@@ -99,7 +99,7 @@ export default function Objectif() {
           </h2>
           <p>Votre poids actuels</p>
         </div>
-        <FaArrowRightLong id="fa-arrow" />
+        <MoveRight size={48} />
         <div>
           <h2>{poidsObjectif} KG</h2>
           <p>Poids à atteindre</p>

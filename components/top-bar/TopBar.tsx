@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import "./topbar.scss";
-import { FaMoon, FaSun } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { Sun, Moon } from "lucide-react";
 
 export default function TopBar() {
   const title = usePathname();
@@ -19,7 +19,7 @@ export default function TopBar() {
       <div id="top-bar-info">
         {" "}
         <span>
-          <FaSun className="text-3xl" />
+          <Sun className="text-3xl" />
         </span>
         <Image
           src="/hijab.jpg"

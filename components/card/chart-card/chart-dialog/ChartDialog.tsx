@@ -45,7 +45,7 @@ export function ChartDialog({
       <DialogTrigger asChild>
         <Button className="dialog-btn">Ajout {btnContent}</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]" id="chart-dialog">
+      <DialogContent className="sm:max-w-[425px] dialog-content">
         <DialogHeader>
           <DialogTitle>{dialogTitle}</DialogTitle>
         </DialogHeader>
