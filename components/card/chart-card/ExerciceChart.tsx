@@ -20,7 +20,7 @@ export default function ExerciceChart() {
   };
   return (
     <div id="chart-card">
-      <Toaster richColors />
+      <Toaster richColors position="top-center" />
       <DoughnutChart data={progressData / 60} goal={goal} />
       <ChartCard
         data_one="Temps d'activité"

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import "./auth-dialog.scss";
 
 export function AuthDialog() {
   return (
@@ -32,7 +33,7 @@ export function AuthDialog() {
             </Label>
             <Input
               id="name"
-              defaultValue="Pedro Duarte"
+              placeholder="Pedro Duarte"
               className="col-span-3"
             />
           </form>
@@ -42,7 +43,7 @@ export function AuthDialog() {
             </Label>
             <Input
               id="username"
-              defaultValue="@peduarte"
+              placeholder="@peduarte"
               className="col-span-3"
             />
           </div>

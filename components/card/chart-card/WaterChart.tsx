@@ -20,7 +20,7 @@ export default function WaterChart() {
   };
   return (
     <div id="chart-card">
-      <Toaster richColors />
+      {/* <Toaster richColors position="top-center" /> */}
       <DoughnutChart data={progressData} goal={goal} />
       <ChartCard
         data_one="Consommation d'eau"

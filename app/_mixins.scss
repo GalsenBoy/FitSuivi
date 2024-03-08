@@ -64,3 +64,18 @@
     padding: 1em;
     max-width: 550px;
 }
+
+@mixin dialogBtn {
+    background: var(--icone-color);
+    margin-top: 1em;
+
+    &:hover {
+        background: var(--text-color);
+        color: var(--icone-color);
+    }
+}
+
+@mixin dialogContent {
+    background: var(--background-one);
+
+}

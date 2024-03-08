@@ -23,7 +23,7 @@ export default function StepsChart() {
 
   return (
     <div id="chart-card">
-      <Toaster richColors />
+      {/* <Toaster richColors position="top-center" /> */}
       <DoughnutChart data={progressData} goal={goal} />
       <ChartCard
         value_one={progressData + " km"}
