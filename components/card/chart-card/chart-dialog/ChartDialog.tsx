@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -44,12 +45,12 @@ export function ChartDialog({
       <DialogTrigger asChild>
         <Button className="dialog-btn">Ajout {btnContent}</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]" id="chart-dialog">
+      <DialogContent className="sm:max-w-[425px] dialog-content">
         <DialogHeader>
           <DialogTitle>{dialogTitle}</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <form className="grid grid-cols-4 items-center gap-4">
+          <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               {label}
             </Label>
@@ -60,16 +61,18 @@ export function ChartDialog({
               className="col-span-3"
               onChange={handleInputChange}
             />
-          </form>
+          </div>
         </div>
         <DialogFooter>
-          <Button
-            onClick={handleSaveDialog}
-            className="dialog-btn"
-            type="submit"
-          >
-            Enregistrer
-          </Button>
+          <DialogClose asChild>
+            <Button
+              onClick={handleSaveDialog}
+              className="dialog-btn"
+              type="submit"
+            >
+              Enregistrer
+            </Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>

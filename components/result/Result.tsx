@@ -1,18 +1,17 @@
+import { Flame, HeartPulse } from "lucide-react";
 import "./result.scss";
-import { FaHeartbeat } from "react-icons/fa";
-import { FaFireAlt } from "react-icons/fa";
 
 export default function Result() {
   const results = [
     {
       content: "Calories brûlées",
       value: "156 KCAL",
-      icon: <FaFireAlt className="text-3xl icon-result" />,
+      icon: <Flame className="text-3xl icon-result" />,
     },
     {
       content: "Pulsation cardiaque",
       value: "79",
-      icon: <FaHeartbeat className="text-3xl icon-result" />,
+      icon: <HeartPulse className="text-3xl icon-result" />,
     },
   ];
   return (

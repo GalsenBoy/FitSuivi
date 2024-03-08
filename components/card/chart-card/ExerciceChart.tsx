@@ -2,6 +2,7 @@ import DoughnutChart from "@/components/Doughnut/DoughnutChart";
 import ChartCard from "./ChartCard";
 import { ChartDialog } from "./chart-dialog/ChartDialog";
 import React from "react";
+import { Toaster, toast } from "sonner";
 
 export default function ExerciceChart() {
   const [progressData, setProgressData] = React.useState(0);
@@ -13,11 +14,13 @@ export default function ExerciceChart() {
   };
   const handleSave = () => {
     if (inputValue > 0 && typeof inputValue === "number") {
-      setProgressData(progressData + inputValue);
+      setProgressData((preExerciceData) => preExerciceData + inputValue);
+      toast.success("Votre temps d'exercice à bien été mis à jour");
     }
   };
   return (
     <div id="chart-card">
+      <Toaster richColors />
       <DoughnutChart data={progressData / 60} goal={goal} />
       <ChartCard
         data_one="Temps d'activité"

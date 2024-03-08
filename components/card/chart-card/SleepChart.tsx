@@ -2,6 +2,7 @@ import DoughnutChart from "@/components/Doughnut/DoughnutChart";
 import ChartCard from "./ChartCard";
 import { ChartDialog } from "./chart-dialog/ChartDialog";
 import React from "react";
+import { Toaster, toast } from "sonner";
 
 export default function SleepChart() {
   const [progressData, setProgressData] = React.useState(0);
@@ -13,11 +14,13 @@ export default function SleepChart() {
   };
   const handleSave = () => {
     if (inputValue > 0 && typeof inputValue === "number") {
-      setProgressData(progressData + inputValue);
+      setProgressData((preSleepData) => preSleepData + inputValue);
+      toast.success("Votre durée de sommeil à bien été mis à jour");
     }
   };
   return (
     <div id="chart-card">
+      <Toaster richColors />
       <DoughnutChart data={progressData} goal={goal} />
       <ChartCard
         data_one="Temps de sommeil"
