@@ -51,7 +51,7 @@
 }
 
 @mixin cardStyle {
-    max-width: 250px;
+    width: 250px;
     margin-top: 4em;
     background-color: var(--background-one);
     border-radius: 1rem;
@@ -62,7 +62,7 @@
     background-color: var(--background-one);
     border-radius: 1rem;
     padding: 1em;
-    max-width: 550px;
+    width: 550px;
 }
 
 @mixin dialogBtn {

@@ -5,7 +5,7 @@ import WaterChart from "./chart-card/WaterChart";
 
 export default function Charts() {
   return (
-    <div className="grid grid-cols-4 gap-2 ">
+    <div className="flex justify-between flex-wrap gap-8">
       <StepsChart />
       <ExerciceChart />
       <SleepChart />
