@@ -18,6 +18,7 @@ type ChartDialogProps = {
   label: string;
   btnContent: string;
   placeholder?: string;
+  hoverBtn?: string;
   onChange: (value: string) => void;
   onSave?: () => void;
 };
