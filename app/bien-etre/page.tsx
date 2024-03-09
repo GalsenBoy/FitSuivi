@@ -42,7 +42,7 @@ export default function BienEtre() {
   return (
     <section>
       <h1 className="text-center text-3xl">Conseil de bien-être</h1>
-      <div id="bien-etre-content" className="grid grid-cols-4">
+      <div id="bien-etre-content" className="flexCardAround">
         {regimes.map((regime, index) => (
           <PageCard
             key={index}
