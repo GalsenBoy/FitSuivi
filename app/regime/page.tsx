@@ -21,7 +21,7 @@ export default function Regime() {
       <h1 className="text-center text-3xl">
         Veuillez chosir votre type de regime
       </h1>
-      <div className=" grid grid-cols-3">
+      <div className="flexCardAround">
         {regimes.map((regime, index) => (
           <PageCard
             key={index}

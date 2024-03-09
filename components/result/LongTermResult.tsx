@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./long-term-result.scss";
-// import { FootPrints } from "react-icons/fa";
 import { Bed, Flame, Footprints, GlassWaterIcon } from "lucide-react";
 
 export default function LongTermResult() {
   return (
     <section id="long-term-result" className=" ">
-      <div className="flex justify-between flex-wrap gap-6">
+      <div className="flexCardBetween gap-6">
         <div id="long-term-card">
           <h2 className="mb-3">Résultats de la semaine dernière</h2>
           <p>

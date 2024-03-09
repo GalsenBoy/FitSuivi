@@ -92,8 +92,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
 
+.flexCardBetween,
+.flexCardAround {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.flexCardBetween {
+  justify-content: space-between;
+}
+
+.flexCardAround {
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 

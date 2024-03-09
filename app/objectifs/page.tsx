@@ -70,7 +70,7 @@ export default function Objectif() {
         une attitude positive, éviter le tabac et l'alcool, limiter le temps
         d'écran, et prendre soin de votre santé mentale.
       </h1>
-      <div className="grid grid-cols-4 gap-2 grid-flow-col mb-7">
+      <div className="flexCardBetween gap-6 mb-12">
         {objectifs.map((objectif, index) => (
           <PageCard
             key={index}
@@ -88,7 +88,7 @@ export default function Objectif() {
           </PageCard>
         ))}
       </div>
-      <div className="grid grid-cols-3 items-center mt-7">
+      <div className="flexCardAround items-center mt-7">
         <div>
           <h2
             className={
