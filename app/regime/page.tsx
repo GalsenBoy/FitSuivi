@@ -29,7 +29,12 @@ export default function Regime() {
             alt={regime.title}
             padding="p-8"
           >
-            <Button className="mt-6 uppercase">{regime.title}</Button>{" "}
+            <Button
+              style={{ background: "var(--icone-color)" }}
+              className="mt-6 uppercase"
+            >
+              {regime.title}
+            </Button>{" "}
           </PageCard>
         ))}
       </div>

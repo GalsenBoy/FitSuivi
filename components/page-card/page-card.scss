@@ -17,9 +17,7 @@
         @include imageCard();
     }
 
-    button {
-        background-color: var(--icone-color);
-    }
+
 
     #image-content-regime {
         @include imageContent();
