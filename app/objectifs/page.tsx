@@ -78,13 +78,15 @@ export default function Objectif() {
             alt={objectif.title}
             padding="p-4"
           >
-            <ChartDialog
-              btnContent={objectif.title}
-              label={objectif.title}
-              placeholder={objectif.placeholder}
-              dialogTitle={objectif.dialogTitle}
-              onChange={(value) => handleInput(value, objectif)}
-            />
+            <div id="chart-card">
+              <ChartDialog
+                btnContent={objectif.title}
+                label={objectif.title}
+                placeholder={objectif.placeholder}
+                dialogTitle={objectif.dialogTitle}
+                onChange={(value) => handleInput(value, objectif)}
+              />
+            </div>
           </PageCard>
         ))}
       </div>
