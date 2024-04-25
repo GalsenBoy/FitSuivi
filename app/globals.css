@@ -73,7 +73,8 @@
   --title: #224b4e;
   --icone-color: #246EB9;
   --text-color: rgb(228, 228, 228);
-  --secondary-text-color: #059BFF
+  --secondary-text-color: #059BFF;
+  --third-text-color: #064789
 }
 
 @layer base {

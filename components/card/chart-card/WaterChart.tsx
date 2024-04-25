@@ -7,7 +7,7 @@ import { Toaster, toast } from "sonner";
 export default function WaterChart() {
   const [progressData, setProgressData] = React.useState(0);
   const [inputValue, setInputValue] = React.useState(0);
-  const goal = 100;
+  const goal = 3;
 
   const handleWaterChange = (value: string) => {
     setInputValue(+value);
@@ -25,8 +25,8 @@ export default function WaterChart() {
       <ChartCard
         data_one="Consommation d'eau"
         data_two="votre objectif"
-        value_one={progressData + " ml"}
-        value_two={goal + " ml"}
+        value_one={progressData + " l"}
+        value_two={goal + " l"}
       />
       <ChartDialog
         onSave={handleSave}
