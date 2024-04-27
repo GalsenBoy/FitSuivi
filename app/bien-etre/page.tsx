@@ -5,7 +5,12 @@ import PageCard from "@/components/page-card/PageCard";
 export default function BienEtre() {
   return (
     <section>
-      <h1 className="text-center text-3xl">Conseil de bien-être</h1>
+      <h1
+        style={{ color: "var(--icone-color)", fontWeight: 500 }}
+        className="text-center text-3xl"
+      >
+        Conseil de bien-être
+      </h1>
       <div id="bien-etre-content" className="flexCardAround">
         {regimes.map((regime, index) => (
           <PageCard

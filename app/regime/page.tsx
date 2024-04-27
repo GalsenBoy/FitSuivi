@@ -18,7 +18,10 @@ export default function Regime() {
   ];
   return (
     <section>
-      <h1 className="text-center text-3xl">
+      <h1
+        className="text-center text-3xl"
+        style={{ color: "var(--icone-color)", fontWeight: 500 }}
+      >
         Veuillez chosir votre type de regime
       </h1>
       <div className="flexCardAround">
