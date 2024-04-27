@@ -10,6 +10,13 @@
         border-radius: .5em;
     }
 
+    #top-bar-title {
+        h1 {
+            color: var(--icone-color);
+            font-weight: 500
+        }
+    }
+
     #top-bar-title,
     #top-bar-info {
         @include flexAlignCenter();

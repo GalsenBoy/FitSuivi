@@ -5,6 +5,11 @@
         font-size: 1.2rem;
         margin-top: 1.7em;
         text-align: center;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            color: var(--icone-color);
+        }
     }
 }
 

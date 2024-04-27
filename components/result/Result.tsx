@@ -16,7 +16,7 @@ export default function Result() {
   ];
   return (
     <section id="result" className=" ">
-      <h1 className="">Résultat du jour</h1>
+      <h1>Résultat du jour</h1>
       <div className="result-content">
         {results.map((result, index) => (
           <div className="flex items-center gap-6 mb-5" key={index}>

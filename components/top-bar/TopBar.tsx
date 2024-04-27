@@ -11,7 +11,7 @@ export default function TopBar() {
   return (
     <header className="top-bar">
       <div id="top-bar-title">
-        <h1 className="text-2xl uppercase">
+        <h1 className="text-3xl uppercase">
           {title == "/" ? "Statistiques" : title.replace("/", "")}
         </h1>
         <input type="date" min="2024-01-15" max={today} />
