@@ -37,10 +37,6 @@ export default function Navigation() {
     },
   ];
 
-  console.log("====================================");
-  console.log(pathname.substring(1, 5));
-  console.log("====================================");
-
   return (
     <aside style={{ gridRow: "1/2" }}>
       <nav id="navigation">
