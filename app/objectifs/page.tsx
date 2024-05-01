@@ -5,12 +5,25 @@ import PageCard from "@/components/page-card/PageCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
 import React from "react";
 import { useObjectifStore } from "@/stores/objectif-store";
-import { MoveRight } from "lucide-react";
+import { MoveDown, MoveRight } from "lucide-react";
 import { objectifs } from "./objectif";
 
 export default function Objectif() {
   const { setDistance, setExercice, setWater, setSleep } = useObjectifStore();
+  const [innerW, setInnerW] = React.useState<boolean>(
+    window.innerWidth < 430 ? true : false
+  );
 
+  React.useEffect(() => {
+    const handleResize = () => {
+      setInnerW(window.innerWidth < 430);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const poids = 88;
   const poidsObjectif = 75;
 
@@ -77,7 +90,13 @@ export default function Objectif() {
           </h2>
           <p>Votre poids actuels</p>
         </div>
-        <MoveRight size={48} />
+        {innerW ? (
+          <MoveDown size={48} id="arrowDown" />
+        ) : (
+          <MoveRight size={48} id="arrowRight" />
+        )}
+        {/* <MoveRight size={48} id="arrowRight" />
+        <MoveDown size={48} id="arrowDown" /> */}
         <div>
           <h2>{poidsObjectif} KG</h2>
           <p>Poids à atteindre</p>
