@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { navigations } from "./navigation-data";
 import { Button } from "../ui/button";
+import Theme from "../theme/Theme";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -51,6 +52,7 @@ export default function Navigation() {
             </span>{" "}
             <AuthDialog />
           </div>
+          <Theme />
         </div>
       </nav>
     </aside>
