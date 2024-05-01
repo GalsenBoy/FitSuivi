@@ -23,3 +23,11 @@
         gap: 4em;
     }
 }
+
+@media screen and (max-width: 610px) {
+    #top-bar-info {
+        img {
+            display: none;
+        }
+    }
+}

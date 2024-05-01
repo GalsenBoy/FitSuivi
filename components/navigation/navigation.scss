@@ -1,6 +1,7 @@
 @import "@/app/mixins";
 
-#navigation {
+#navigation,
+#isShow {
     position: fixed;
     left: 0;
     top: 0;
@@ -66,7 +67,25 @@
 }
 
 #navigation,
+#isShow,
 #nav-items,
 #nav-login {
     @include flexColumn()
+}
+
+
+
+@media screen and (max-width: 982px) {
+    #navigation {
+        display: none;
+        transition: all 0.5s ease-in-out;
+        width: 50%;
+    }
+
+    #isShow {
+        display: block;
+        transition: all 0.5s ease-in-out;
+        width: 50%;
+
+    }
 }

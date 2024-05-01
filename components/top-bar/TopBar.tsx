@@ -3,11 +3,16 @@ import Image from "next/image";
 import "./topbar.scss";
 import { usePathname } from "next/navigation";
 import { Sun, Moon } from "lucide-react";
+import { useState } from "react";
 
 export default function TopBar() {
   const title = usePathname();
   const today = new Date().toISOString().split("T")[0];
+  const [theme, setTheme] = useState(true);
 
+  const toggleTheme = () => {
+    setTheme(!theme);
+  };
   return (
     <header className="top-bar">
       <div id="top-bar-title">
@@ -18,8 +23,8 @@ export default function TopBar() {
       </div>
       <div id="top-bar-info">
         {" "}
-        <span>
-          <Sun className="text-3xl" />
+        <span className=" cursor-pointer" onClick={toggleTheme}>
+          {theme ? <Sun className="text-3xl" /> : <Moon className="text-3xl" />}
         </span>
         <Image
           src="/hijab.jpg"
