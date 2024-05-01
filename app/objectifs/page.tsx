@@ -3,18 +3,16 @@
 import "./objectif.scss";
 import PageCard from "@/components/page-card/PageCard";
 import { ChartDialog } from "@/components/card/chart-card/chart-dialog/ChartDialog";
-import React from "react";
+import { useEffect, useState } from "react";
 import { useObjectifStore } from "@/stores/objectif-store";
 import { MoveDown, MoveRight } from "lucide-react";
 import { objectifs } from "./objectif";
 
 export default function Objectif() {
   const { setDistance, setExercice, setWater, setSleep } = useObjectifStore();
-  const [innerW, setInnerW] = React.useState<boolean>(
-    window.innerWidth < 430 ? true : false
-  );
+  const [innerW, setInnerW] = useState<boolean>();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       if (typeof window !== "undefined") {
         setInnerW(window.innerWidth < 430 ? true : false);
