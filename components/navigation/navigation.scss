@@ -73,7 +73,11 @@
     @include flexColumn()
 }
 
-
+#nav-login {
+    .theme {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 982px) {
     #navigation {
@@ -88,4 +92,13 @@
         width: 50%;
 
     }
+}
+
+@media screen and (max-width: 500px) {
+    #nav-login {
+        .theme {
+            display: block;
+        }
+    }
+
 }
