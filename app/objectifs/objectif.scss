@@ -10,11 +10,11 @@
     h2 {
         font-size: 3.5em;
     }
-
-    #fa-arrow {
-        font-size: 4.5em;
-    }
 }
 
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 435px) {
+    .flexCardAround {
+        flex-direction: column;
+    }
+}
