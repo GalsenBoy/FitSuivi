@@ -15,7 +15,7 @@ export default function Objectif() {
   useEffect(() => {
     const handleResize = () => {
       if (typeof window !== "undefined") {
-        setInnerW(window.innerWidth < 430 ? true : false);
+        setInnerW(window.innerWidth < 435 ? true : false);
       }
     };
 
